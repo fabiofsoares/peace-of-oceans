@@ -1,0 +1,42 @@
+{
+    "amazon": {
+        "header":{
+            "local" : "Amazon Reef",
+            "icon" : "amazon_reef",
+            "infos" : [
+                {
+                    "number":"1/6",
+                    "text":"Zone</br>débloquées"
+                },
+                {
+                    "number":"30%",
+                    "text":"Amazon</br>Reef"
+                },
+                {
+                    "number":"05",
+                    "text":"Partage</br>Restants"
+                }
+            ]
+        },
+        "locals":[
+            {
+                "local" : "Amazon Reef", 
+                "width" : 75, 
+                "open" : true, 
+                "icon" : "amazon_reef"
+            },
+            {
+                "local" : "Amazon Reef", 
+                "width" : 25, 
+                "open" : true, 
+                "icon" : "amazon_reef"
+            },
+            {
+                "local" : "Amazon Reef", 
+                "width" : 25, 
+                "open" : false, 
+                "icon" : "amazon_reef"
+            }
+        ]
+    }
+}

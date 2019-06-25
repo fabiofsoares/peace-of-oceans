@@ -1,12 +1,26 @@
 <div class="{{open ? 'animal active' : 'animal'}}">
+
     <div class="icon-animal">
         <img src="{{'img/animal/' ~ icon ~ '.png'}}" />
         {% if not open %}
             <img class="lock" src="{{'img/icons/lock.png'}}" />
         {% endif %}
     </div>
+
     <div class="bar">
         <span class="load"  style="{{'width :' ~ width ~ '%'}}"></span>
     </div>
+
     <p class="local">{{local}}</p>
+
+    <div id="popin-animal" class="popin-info-animal">
+        {% if open %}
+            {% include 'ui/_popin_01.html.twig' with { title : 'Bravo !', text :'Tu as débloqué cette zone. Découvre la biodiversité qui s’y cache !', btn : 'VOIR CETTE ZONE' }%}
+        {% else %}
+            {% include 'ui/_popin_01.html.twig' with { title : 'OOUps ! C’est bloqué', text :'Partage la pétition pour débloquer cette zone !', btn : 'Partager' }%}
+        {% endif %}
+    </div>
+
 </div>
+
+

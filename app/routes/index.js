@@ -6,6 +6,6 @@ let express     = require('express'),
 //Routes
 router.get('/', index.accueil )
 
-router.get('/ocean', index.ocean )
+router.get('/amazon', index.amazon )
 
 module.exports = router;

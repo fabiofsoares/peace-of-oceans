@@ -1,36 +1,17 @@
 <div id="more-ocean" class="more-ocean">
-    <div class="more-ocean-header">
-        
-        <div class="logo-more">
-            <div class="amazon-reef">
-                <img alt="carte" src="img/amazon_reef.png" />
-            </div>
-            <div class="amazon-reef-text title">Amazon Reef</div>
-        </div>
+    
+    {% include 'components/_header_more.html.twig' with { data : data.header }%}
 
-        <div class="infos-more">
-            <div class="info info-01">
-                <div class="number">1/6</div>
-                <div class="text">Zone</br>débloquées</div>
-            </div>
-            <div class="info info-02">
-                <div class="number">30%</div>
-                <div class="text">Amazon</br>Reef</div>
-            </div>
-            <div class="info info-03">
-                <div class="number">05</div>
-                <div class="text">Partage</br>Restants</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="more-ocean-content open">
+    <div id="more-ocean-content" class="more-ocean-content">
         <div class="content-more">
             <h2 class="title">Zones à protéger</h2>
             <div class="animals-container">
-                
-                {% include 'components/_animal_more.html.twig' with { width : 75, local : 'Amazon Reef', open : false, icon : 'amazon_reef' }%}
-
+                {% for animal in data.locals %}
+                    {% include 'components/_animal_more.html.twig' with { width : animal.width, local : animal.local, open : animal.open, icon : animal.icon }%} 
+                {% endfor %}
+            </div>
+            <div class="close-container">
+                <div id="close-more" class="close btn title">Fermer</div>
             </div>
         </div>
 

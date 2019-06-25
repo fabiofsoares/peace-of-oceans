@@ -1,0 +1,18 @@
+<div class="more-ocean-header">
+    <div id="open-more" class="logo-more">
+        <div class="amazon-reef">
+            <img src="{{'img/pages/' ~ data.icon ~ '.png'}}" />
+        </div>
+        <div class="amazon-reef-text title">{{ data.local }}</div>
+        <img class="open-icon" src="img/icons/open.png" />
+    </div>
+
+    <div class="infos-more">
+        {% for info in data.infos %}
+            <div class="{{'info info-0' ~ loop.index }}">
+                <div class="number">{{ info.number }}</div>
+                <div class="text">{{ info.text }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -21,6 +21,7 @@ h1 {
 
 .title {
     font-family: 'SanctuaryLC', sans-serif;
+    text-transform: uppercase;
 }
 
 h1 .up {
@@ -43,12 +44,6 @@ header .content-header {
 
 header .content-header .title-header {
     color: #FFFFFF;
-}
-
-header .content-header .action-header .icon {
-    width: 25px;
-    height: 25px;
-    background-color: blue; 
 }
 
 /*---- Ocean Page -----*/
@@ -119,6 +114,18 @@ header .content-header .action-header .icon {
     transform: translateY(-25px);
 }
 
+.more-ocean .more-ocean-header .logo-more { 
+    position: relative; 
+    cursor: pointer;
+}
+
+.more-ocean .more-ocean-header .open-icon {
+    position: absolute;
+    right: -25px;
+    bottom: 25px;
+    width: 20px;
+}
+
 .more-ocean .more-ocean-header {
     display: flex;
     justify-content: space-between;
@@ -132,7 +139,7 @@ header .content-header .action-header .icon {
     padding: 0 10px;
 }
 
-.more-ocean.infos-more .info-01, 
+.more-ocean .infos-more .info-01, 
 .more-ocean .infos-more .info-02 {
     border-right: 1px solid white;
 }
@@ -148,61 +155,46 @@ header .content-header .action-header .icon {
     color: #C6C6C6;
 }
 
+.more-ocean .more-ocean-content {
+    height: 0;
+    transition: all ease .8s;
+}
+.more-ocean .more-ocean-content .content-more {
+    display: none;
+}
+
 .more-ocean .more-ocean-content.open {
     height: 70vh;
 }
-
-
-
-
-footer {
-  border: 1px solid blue; 
+.more-ocean .more-ocean-content.open .content-more {
+    display: block;
 }
-
-
-
-/* ------- UI -------- */
-
-.map-world-menu {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-}
-.petiton-action {
-    position: absolute;
-    bottom: 25%;
-    left: 5%;
-    text-align: center;
-}
-.petiton-action .petition-text {
-    color: #FFFFFF;
-    text-transform: uppercase;
-}
-
 
 .more-ocean .more-ocean-content .content-more h2 {
     margin-top: 25px;
     text-align: center;
     color: #FFFFFF;
-    text-transform: uppercase;
     font-size: 20px;
 }
 
 .animals-container {
-    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
 .animals-container .animal {
     display: inline-block;
     text-align: center;
     filter: grayscale(100%);
+    margin-top: 25px;
+    opacity: .7;
 }
 
 .animals-container .animal.active {
     filter: none;
+    opacity: 1;
 }
 
 .animals-container .animal .bar {
@@ -242,4 +234,95 @@ footer {
 .animals-container .animal p {
     color: #FFFFFF;
     margin-top: 10px;
+}
+
+.more-ocean .more-ocean-content .close-container {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+    text-align: right;
+}
+
+.more-ocean .more-ocean-content .close-container .btn {
+    border: 1px solid #000;
+    background-color: #FFF;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+footer {
+    border: 1px solid blue; 
+  }
+  
+  
+  
+  /* ------- UI -------- */
+  
+  .map-world-menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+  }
+  .petiton-action {
+      position: absolute;
+      bottom: 25%;
+      left: 5%;
+      text-align: center;
+  }
+  .petiton-action .petition-text {
+      color: #FFFFFF;
+      text-transform: uppercase;
+  }
+
+.popin-info-animal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.popin-info-animal.open {
+    display: flex;
+}
+
+.popin-info-animal .component-popin {
+    padding: 0 10%;
+}
+
+.popin-info-animal .component-popin .popin{
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px;
+}
+
+.popin-info-animal .component-popin .popin p {
+    color: #000;
+    margin-top: 10px;
+}
+
+.popin-info-animal .component-popin .popin .cta {
+    margin-top: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 3px 10px;
+    cursor: pointer;
 }
