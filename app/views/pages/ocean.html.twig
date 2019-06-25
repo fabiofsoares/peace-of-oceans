@@ -1,0 +1,28 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Accueil
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<div id="ocean-page" class="ocean-page">
+
+<div class="spinner-container">
+    <div id="spinner-01" class="spinner spinner-01"></div>
+    <div id="spinner-02" class="spinner spinner-02"></div>
+    <div id="spinner-03" class="spinner spinner-03"></div>
+</div>
+
+{% include 'ui/_map_world.html.twig' %}  
+
+{% include 'ui/_petition_button.html.twig' %}
+
+{% include 'components/_more_infos.html.twig' %}
+
+</div>
+{% endblock %}

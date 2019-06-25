@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'SanctuaryLC';
+  src: url("../../fonts/SanctuaryLC-Regular.otf") format("truetype");
+  font-weight: bold; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'SanctuaryLC', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 18px;
+}
+
+.title {
+    font-family: 'SanctuaryLC', sans-serif;
+}
+
+h1 .up {
+    font-size: 14px;
+}
+
+
+header {
+    border: 1px solid red; 
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(180deg, #06334C 24.63%, rgba(6, 51, 76, 0) 100%);
+}
+
+header .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+header .content-header .title-header {
+    color: #FFFFFF;
+}
+
+header .content-header .action-header .icon {
+    width: 25px;
+    height: 25px;
+    background-color: blue; 
+}
+
+/*---- Ocean Page -----*/
+.ocean-page {
+    height: 100vh;
+    background: url('../../img/bg/background-ocean.png') center center no-repeat;
+    background-size: cover; 
+    
+}
+
+.ocean-page .spinner-container {
+    border: 1px solid green;
+    height: 100vh;
+}
+
+.ocean-page .spinner-container .spinner {
+    background-color: #FFF;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ocean-page .spinner-container .spinner:after {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+}
+
+#spinner-01 {
+    transform: translate(200px, 270px);
+}
+#spinner-02 {
+    transform: translate(200px, 380px);
+}
+#spinner-03 {
+    transform: translate(25px, 25px);
+}
+
+
+.ocean-page .more-ocean {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    padding: 0 10px;
+
+    background: linear-gradient(360deg, #073A57 40.71%, #1676AC 96.86%);
+}
+
+.ocean-page .more-ocean .amazon-reef {
+    border-radius: 50%;
+    padding: 10px;
+    transform: translateY(-30px);
+    text-align: center;
+    background: linear-gradient(360deg, transparent 40%, #1676AC 60%)
+}
+
+.ocean-page .more-ocean .amazon-reef-text {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    transform: translateY(-25px);
+}
+
+.ocean-page .more-ocean-header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ocean-page .infos-more .info {
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0 10px;
+}
+
+.ocean-page .infos-more .info-01, 
+.ocean-page .infos-more .info-02 {
+    border-right: 1px solid white;
+}
+
+.ocean-page .infos-more .info .number {
+    font-family: 'SanctuaryLC', sans-serif;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.ocean-page .infos-more .info .text {
+    font-size: 14px;
+    color: #C6C6C6;
+}
+
+
+
+
+footer {
+  border: 1px solid blue; 
+}
+
+
+
+/* ------- UI -------- */
+
+.map-world-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.petiton-action {
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+    text-align: center;
+}
+.petiton-action .petition-text {
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+

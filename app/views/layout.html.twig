@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="stylesheet/css/style.css"/>
+    
+    <!-- SLICK -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+   
+    
+{% endblock %}
+
+{% block body %}  
+    <main class="main-wrapper">        
+        {% include 'components/header.html.twig' %}        
+        
+        <div class="content-wrapper">
+            {% block content %}
+                
+            {% endblock %}            
+        </div>
+
+        
+    </main>
+
+{% endblock %}
+
+{% block javascripts %}
+    <!-- jQuery Scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+       
+    <script type="text/javascript" src="js/script.js"></script>
+    
+    
+
+{% endblock %}

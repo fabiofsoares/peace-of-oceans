@@ -1,0 +1,22 @@
+header {
+    border: 1px solid red;
+    
+    .content-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+        
+        .title-header {
+            border: 1px solid red;
+        }
+
+        .action-header {
+            .icon {
+                width: 25px;
+                height: 25px;
+                background-color: blue;
+            }
+        }
+    }
+}
