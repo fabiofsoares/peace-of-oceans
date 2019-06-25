@@ -1,0 +1,12 @@
+<div class="{{open ? 'animal active' : 'animal'}}">
+    <div class="icon-animal">
+        <img src="{{'img/animal/' ~ icon ~ '.png'}}" />
+        {% if not open %}
+            <img class="lock" src="{{'img/icons/lock.png'}}" />
+        {% endif %}
+    </div>
+    <div class="bar">
+        <span class="load"  style="{{'width :' ~ width ~ '%'}}"></span>
+    </div>
+    <p class="local">{{local}}</p>
+</div>

@@ -29,7 +29,6 @@ h1 .up {
 
 
 header {
-    border: 1px solid red; 
     position: fixed;
     width: 100%;
     background: linear-gradient(180deg, #06334C 24.63%, rgba(6, 51, 76, 0) 100%);
@@ -95,8 +94,8 @@ header .content-header .action-header .icon {
     transform: translate(25px, 25px);
 }
 
-
-.ocean-page .more-ocean {
+/* --- MORE INFOS Component ---- */
+.more-ocean {
     position: absolute;
     bottom: 0;
 
@@ -106,7 +105,7 @@ header .content-header .action-header .icon {
     background: linear-gradient(360deg, #073A57 40.71%, #1676AC 96.86%);
 }
 
-.ocean-page .more-ocean .amazon-reef {
+.more-ocean .amazon-reef {
     border-radius: 50%;
     padding: 10px;
     transform: translateY(-30px);
@@ -114,39 +113,43 @@ header .content-header .action-header .icon {
     background: linear-gradient(360deg, transparent 40%, #1676AC 60%)
 }
 
-.ocean-page .more-ocean .amazon-reef-text {
+.more-ocean .amazon-reef-text {
     color: #FFFFFF;
     text-transform: uppercase;
     transform: translateY(-25px);
 }
 
-.ocean-page .more-ocean-header {
+.more-ocean .more-ocean-header {
     display: flex;
     justify-content: space-between;
 
 }
 
-.ocean-page .infos-more .info {
+.more-ocean .infos-more .info {
     display: inline-block;
     text-align: center;
     margin-top: 5px;
     padding: 0 10px;
 }
 
-.ocean-page .infos-more .info-01, 
-.ocean-page .infos-more .info-02 {
+.more-ocean.infos-more .info-01, 
+.more-ocean .infos-more .info-02 {
     border-right: 1px solid white;
 }
 
-.ocean-page .infos-more .info .number {
+.more-ocean .infos-more .info .number {
     font-family: 'SanctuaryLC', sans-serif;
     font-size: 20px;
     color: #FFF;
 }
 
-.ocean-page .infos-more .info .text {
+.more-ocean .infos-more .info .text {
     font-size: 14px;
     color: #C6C6C6;
+}
+
+.more-ocean .more-ocean-content.open {
+    height: 70vh;
 }
 
 
@@ -179,3 +182,64 @@ footer {
     text-transform: uppercase;
 }
 
+
+.more-ocean .more-ocean-content .content-more h2 {
+    margin-top: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.animals-container {
+    margin-top: 25px;
+}
+
+.animals-container .animal {
+    display: inline-block;
+    text-align: center;
+    filter: grayscale(100%);
+}
+
+.animals-container .animal.active {
+    filter: none;
+}
+
+.animals-container .animal .bar {
+    background-color: #FFF;
+    height: 8px;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.animals-container .animal .icon-animal {
+    position: relative;
+}
+
+.animals-container .animal .icon-animal .lock {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+}
+
+.animals-container .animal .bar .load {
+    position: absolute;
+    display: inline-block;
+    height: 8px;
+    left: 0;
+    border-radius: 4px;
+    
+    background: rgba(245,147,115,1);
+    background: -moz-linear-gradient(45deg, rgba(245,147,115,1) 0%, rgba(231,95,52,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(245,147,115,1)), color-stop(100%, rgba(231,95,52,1)));
+    background: -webkit-linear-gradient(45deg, rgba(245,147,115,1) 0%, rgba(231,95,52,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(245,147,115,1) 0%, rgba(231,95,52,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(245,147,115,1) 0%, rgba(231,95,52,1) 100%);
+    background: linear-gradient(45deg, rgba(245,147,115,1) 0%, rgba(231,95,52,1) 100%);
+}
+
+.animals-container .animal p {
+    color: #FFFFFF;
+    margin-top: 10px;
+}

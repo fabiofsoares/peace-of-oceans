@@ -1,11 +1,13 @@
 <div id="more-ocean" class="more-ocean">
     <div class="more-ocean-header">
+        
         <div class="logo-more">
             <div class="amazon-reef">
                 <img alt="carte" src="img/amazon_reef.png" />
             </div>
             <div class="amazon-reef-text title">Amazon Reef</div>
         </div>
+
         <div class="infos-more">
             <div class="info info-01">
                 <div class="number">1/6</div>
@@ -21,5 +23,16 @@
             </div>
         </div>
     </div>
-    <div class="more-ocean-content close"></div>
+
+    <div class="more-ocean-content open">
+        <div class="content-more">
+            <h2 class="title">Zones à protéger</h2>
+            <div class="animals-container">
+                
+                {% include 'components/_animal_more.html.twig' with { width : 75, local : 'Amazon Reef', open : false, icon : 'amazon_reef' }%}
+
+            </div>
+        </div>
+
+    </div>
 </div>
