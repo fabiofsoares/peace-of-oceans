@@ -11,10 +11,45 @@
 {% block content %}
 
 <div class="home-page">
-Home page
+    <div id="home-section" class="content-home-page active">
+    
+    <div class="header">
+        <h1 class="title">Adopte une partie d’océan et protège là !</h1>
+        <div class="image-header">
+            <img class="open-icon" src="img/mask-map.png" />
+        </div>
+        <p>Déjà 750 000 signataires se sont rassemblés pour protéger 30% des océans et limiter le réchauffement climatique.</p>
+    </div>
 
+    <div class="form-sign">
+        <div class="input-container names">
+            <input type="text" id="firstname" name="firstname" class="ui-input fistname" placeholder="Prénom*" />
+            <input type="text" id="lastname" name="lastname" class="ui-input lastname" placeholder="Nom*" />
+        </div>
+        <div class="input-container">
+            <input type="email" class="ui-input email" placeholder="Email*" />
+        </div>
+        <div class="input-container">
+            <input type="text" class="ui-input phone" placeholder="Numéro de téléphone" />
+        </div>
+        <div class="input-container">
+            <input type="text" class="ui-input postal" placeholder="Code postal*" />
+        </div>
+        <div class="input-container submit">
+            <div id="sign" class="submit-btn">JE SIGNE</div>
+        </div>
+    </div>
+    </div>
 
-
+    <div id="certificate-section" class="certificate-section">
+        {% include 'components/_certificate.html.twig' %}
+    </div>
 
 </div>
+{% endblock %}
+
+{% block javascripts %}
+
+<script type="text/javascript" src="js/home-script.js"></script>
+
 {% endblock %}

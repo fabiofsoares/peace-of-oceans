@@ -3,6 +3,10 @@
   margin: 0;
   box-sizing: border-box; }
 
+  a {
+      text-decoration: none;
+  }
+
 @font-face {
   font-family: 'SanctuaryLC';
   src: url("../../fonts/SanctuaryLC-Regular.otf") format("truetype");
@@ -33,6 +37,7 @@ header {
     position: fixed;
     width: 100%;
     background: linear-gradient(180deg, #06334C 24.63%, rgba(6, 51, 76, 0) 100%);
+    z-index: 20;
 }
 
 header .content-header {
@@ -55,7 +60,6 @@ header .content-header .title-header {
 }
 
 .ocean-page .spinner-container {
-    border: 1px solid green;
     height: 100vh;
 }
 
@@ -98,6 +102,8 @@ header .content-header .title-header {
     padding: 0 10px;
 
     background: linear-gradient(360deg, #073A57 40.71%, #1676AC 96.86%);
+
+    z-index: 10;
 }
 
 .more-ocean .amazon-reef {
@@ -267,14 +273,56 @@ footer {
   
   /* ------- UI -------- */
   
-  .map-world-menu {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-  }
+.map-world-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    transition: all ease .8s;
+    width: 60px;
+}
+
+.map-world-menu.open {
+    width: 100%;
+    z-index: 15;
+}
+
+.map-world-menu.open .map-world-icon {
+    display: none;
+}
+
+
+.map-world-menu .map-world-content {
+    position: relative;
+}
+
+.map-world-menu .view-icon-back {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    z-index: 10;
+}
+
+.map-world-menu  .map-image {
+    height: 100vh;
+    background-color: #09334b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-world-menu  .map-image img{
+    width: 80%;
+}
+
+
+
+
+
+
+
   .petiton-action {
       position: absolute;
       bottom: 25%;
@@ -318,6 +366,16 @@ footer {
     margin-top: 10px;
 }
 
+.popin-info-animal .component-popin .popin .content {
+    position: relative;
+}
+
+.popin-info-animal .component-popin .popin .content .close-popin {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
 .popin-info-animal .component-popin .popin .cta {
     margin-top: 10px;
     border: 1px solid #000;
@@ -325,4 +383,155 @@ footer {
     display: inline-block;
     padding: 3px 10px;
     cursor: pointer;
+}
+
+
+.home-page {
+    height: 100vh;
+    background: url('../../img/bg/background-ocean.png') center center no-repeat;
+    background-size: cover; 
+}
+
+.home-page .content-home-page.active {
+    display: block;
+}
+
+.home-page .content-home-page {
+    padding-top: 100px;
+    height: 100vh;
+    background: rgba(9, 51, 75, 0.5);
+    display: none;
+}
+
+.home-page .header {position: relative;}
+
+.home-page .header h1 {
+    text-transform: none;
+    text-align: center;
+    color: #FFF;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    position: absolute;
+    width: 100%;
+}
+
+.home-page .image-header {
+
+}
+
+.home-page .image-header img{
+    width: 100%;   
+}
+
+.home-page .header p {
+    color: #FFF;
+    font-family: 'SanctuaryLC', sans-serif;
+    padding: 0 20px;
+    transform: translateY(-10px);
+}
+
+.home-page .form-sign {
+    padding: 0 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.home-page .input-container.names {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-page .input-container .ui-input {
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #FFF;
+    background-color: transparent;
+    padding: 15px 10px;
+    font-size: 15px;
+    display: inline-block;
+    width: 47%;
+    margin-top: 15px;
+}
+
+.home-page .input-container .ui-input::placeholder {
+    color: #FFF;
+}
+.home-page .input-container .ui-input.email,
+.home-page .input-container .ui-input.phone,
+.home-page .input-container .ui-input.postal {
+    width: 100%;
+}
+.home-page .input-container.submit {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.home-page .input-container .submit-btn {
+    display: inline-block;
+    padding: 10px 15px;
+
+    background: #E38706;
+    border-radius: 70px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.certificate-section {
+    display: none;
+}
+
+.certificate-section.active {
+    display: block;
+}
+
+.certificate-component {
+    width: 100vW;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    
+}
+
+.certificate-component .certificate-container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #FFF;
+    max-width: 450px;
+    padding: 20px 15px;
+}
+
+.certificate-header, .certificate-infos {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.certificate-header h2 {
+    color: #E38706;
+}
+.certificate-infos {
+    color: rgba(9, 51, 75, 1);
+}
+.certificate-infos .user-name {
+    font-size: 20px;
+}
+
+.certificate-component .certificate-container .map {
+    width: 70%;
+    margin: 20px auto 0;
+    text-align: center;
+}
+.certificate-component .certificate-container .map img { width: 80%;}
+.certificate-component .submit-btn {
+    border-radius: 9px !important;
+}
+.submit-btn.next {
+    background-color: #06334C !important;
 }
